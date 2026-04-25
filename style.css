@@ -1,0 +1,180 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+header {
+    background-color: #444;
+    color: white;
+    padding: 1em 0;
+    margin-bottom: 2em;
+}
+
+body.dark-mode header {
+    background-color: #222;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body.dark-mode nav ul li a {
+    color: #ddd;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+section {
+    margin: 2em 0;
+}
+
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Project Styles */
+#project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1em;
+    width: 100%;
+    max-width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .project-card {
+    border-color: #555;
+    background-color: #444;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Styles */
+.skill-inputs {
+    display: flex;
+    gap: 0.5em;
+    margin: 1em 0;
+}
+
+.skill-inputs input {
+    flex: 1;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.skill-inputs button {
+    flex-shrink: 0;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0.5em 0;
+}
+
+.skill-bar-fill {
+    background-color: #4caf50;
+    height: 20px;
+    width: 0;
+    border-radius: 5px;
+    transition: width 0.3s;
+}
+
+body.dark-mode .skill-bar-fill {
+    background-color: #76c7c0;
+}
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 0.5em;
+}
+
+form input,
+form textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0.2em;
+}
+
+form button {
+    align-self: flex-start;
+    margin-top: 1em;
+}
