@@ -4,16 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     */
     
     // TODO: Get the elements from the DOM and store them in variables. Include the following elements:
-    // - introduction
-    // - editIntroButton
-    // - projectList
-    // - skillList
-    // - addSkillButton
-    // - newSkillInput
-    // - skillLevelInput
-    // - contactForm
-    // - themeToggleButton
-    // - body
+    const introduction = document.getElementById('introduction');
+    const editIntroButton = document.getElementById('edit-intro');
+    const projectList = document.getElementById('project-list');
+    const skillList = document.getElementById('skill-list');
+    const addSkillButton = document.getElementById('add-skill');
+    const newSkillInput = document.getElementById('new-skill');
+    const skillLevelInput = document.getElementById('skill-level');
+    const contactForm = document.getElementById('contact-form');
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
 
     /* PART 2: IMPLEMENT DYNAMIC PROJECTS AND SKILLS
     --------------------------------------------------
