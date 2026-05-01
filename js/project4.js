@@ -94,10 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (newSkill && skillLevel >= 0 && skillLevel <= 100) {
             // TODO: 
             //   1. Add the new skill to the skills array and display the updated list of skills. 
+            skills.push({ name: newSkill, level: skillLevel });
+            displaySkills();
             //   2. Clear the input fields after adding the skill
-
+            newSkillInput.value = '';
+            skillLevelInput.value = '';
         } else {
             // TODO: Display an alert if the skill name is empty or the skill level is not between 0 and 100
+            alert("Please enter a valid skill name and a level between 0 and 100.");
         }
     });
 
