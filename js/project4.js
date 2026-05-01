@@ -117,6 +117,17 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("All fields are required.");
             return;
         }
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST', 
+            body: JSON.stringify({ name, email, message }), 
+            headers: { 'Content-type': 'application/json; charset=UTF-8' }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Success! Your message has been sent.");
+            }
+        })
+        .catch(error => alert("There was an error sending your message."));
     });
 
     /* PART 5: IMPLEMENT THEME TOGGLE
