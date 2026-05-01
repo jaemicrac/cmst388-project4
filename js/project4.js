@@ -78,6 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     editIntroButton.addEventListener('click', () => {
         // TODO: Prompt the user to enter a new introduction and update the introduction element with the new text
+        const newInto = prompt("Enter a new introduction:");
+        if (newIntro) {
+            introduction.textContent = newIntro;
+        }
     });
 
     /* PART 4: IMPLEMENT SKILLS DISPLAY AND CONTACT FORM FUNCTIONALITY
