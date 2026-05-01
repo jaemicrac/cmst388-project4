@@ -109,8 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         // TODO: 
         //   1. Get the values from the form fields name, email, and message and store them in variables.
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
         //   2. Display an alert if any of the fields are empty. Otherwise, display a success message
-
+        if (!name || !email || !message) {
+            alert("All fields are required.");
+            return;
+        }
     });
 
     /* PART 5: IMPLEMENT THEME TOGGLE
