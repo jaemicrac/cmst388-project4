@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     editIntroButton.addEventListener('click', () => {
         // TODO: Prompt the user to enter a new introduction and update the introduction element with the new text
-        const newInto = prompt("Enter a new introduction:");
+        const newIntro = prompt("Enter a new introduction:");
         if (newIntro) {
             introduction.textContent = newIntro;
         }
@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => {
             if (response.ok) {
                 alert("Success! Your message has been sent.");
+                contactForm.reset();
             }
         })
         .catch(error => alert("There was an error sending your message."));
