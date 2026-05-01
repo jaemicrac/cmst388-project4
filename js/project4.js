@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Ticket Purchasing System',
             description: 'A dynamic event registration system featuring a 10-minute timer and real-time cost calculation built with JavaScript.',
             link: 'https://cmst388-umgc-jcracolici.azurewebsites.net/event_registration.html'
-        }, 
-        {
+        },
+       {
             title: 'Form Validation',
-            descritpion: 'Developed a client-side validation system for a user registration form.',
+            description: 'Developed a client-side validation system for a user registration form.', // FIXED TYPO HERE
             link: 'https://cmst388-umgc-jcracolici.azurewebsites.net/'
         }
     ];
@@ -45,31 +45,29 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayProjects() {
         projectList.innerHTML = '';
         projects.forEach(project => {
-            // TODO: Create a new div element assigned to a new variable called projectCard and assign a className of 'project-card'. Set innerHTML to display the project title, description, and link
-            // Example: projectCard.innerHTML = `<h3>${project.title}</h3> ...`
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card';
-            projectCard.innerHTML = '
+            // FIXED: Changed ' to ` and fixed ${project.description} typo
+            projectCard.innerHTML = `
                 <h3>${project.title}</h3>
-            <p>${project.desciption}</p>
-        <a href="${project.link}" target="_blank">View Project</a>
-        ';
+                <p>${project.description}</p>
+                <a href="${project.link}" target="_blank">View Project</a>
+            `;
             projectList.appendChild(projectCard);
-        
         });
     }
 
-    function displaySkills() {
+   function displaySkills() {
         skillList.innerHTML = '';
         skills.forEach(skill => {
             // TODO: Create a new li element assigned to a new variable called skillItem. Set innerHTML to display the skill name and level
-            const skillItem = document.createElement('li');
-            skillItem.innerHTML = '
+           const skillItem = document.createElement('li');
+           skillItem.innerHTML = `
                 <strong>${skill.name}</strong>
-            <div class="skill-bar">
-                       <div class="skill-bar-fill" style="width: ${skill.level}%"></div>
-            </div>
-    ';
+                <div class="skill-bar">
+                    <div class="skill-bar-fill" style="width: ${skill.level}%"></div>
+                </div>
+            `;
             skillList.appendChild(skillItem);
         });
     }
