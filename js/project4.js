@@ -136,6 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     themeToggleButton.addEventListener('click', () => {
         // TODO: Toggle the dark-mode class on the body and save the theme preference to local storage
+        body.classList.toggle('dark-mode');
+        const currentTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', currentTheme);
     });
 
     // Do not edit any code below this line
